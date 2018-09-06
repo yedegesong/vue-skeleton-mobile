@@ -64,7 +64,7 @@ module.exports = {
     /**
      * 这应该是build.assetsRoot通过HTTP提供服务的URL路径。在大多数情况下，这将是root（/）。只有在后端框架为具有路径前缀的静态资产提供服务时才更改此项
      */
-    assetsPublicPath: '/vue-skeleton-mobile/dist',
+    assetsPublicPath: '/',
 
     /**
      * Source Maps

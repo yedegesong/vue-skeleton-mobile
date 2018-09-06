@@ -7,7 +7,9 @@ import store from '@vuex/store/store'
 import filters from '@filters/index'
 import directive from '@directive/index'
 import api from '@api/api'
-import '@less/app.less';
+import '@static/styles/less/app.less';
+import '@static/styles/demo.css';
+import '@static/font/iconfont.css';
 Vue.config.productionTip = false
 /**
  * 获取环境变量
