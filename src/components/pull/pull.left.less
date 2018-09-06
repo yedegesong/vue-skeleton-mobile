@@ -1,0 +1,41 @@
+.xfd-cell-swipe-box {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    position: relative;
+  }
+  
+  .xfd-cell-swipe {
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    transition: all .5s;
+    //transform: translate3d(-179.531px, 0px, 0px);
+  }
+  
+  .xfd-cell-swipe-footer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 100%;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    box-align: center;
+    align-items: center;
+  }
