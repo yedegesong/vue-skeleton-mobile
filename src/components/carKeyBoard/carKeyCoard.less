@@ -1,0 +1,193 @@
+.box(){
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;
+  }
+  .box-flex(@flex:1){
+    -webkit-box-flex: @flex;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: @flex;         /* OLD - Firefox 19- */
+    -webkit-flex: @flex;          /* Chrome */
+    -ms-flex: @flex;              /* IE 10 */
+    flex: @flex;
+  }
+  .ui-carkeyboard-main{
+      padding: 20px;
+  }
+  .ui-car-key-board{
+      .box();
+      width: 11.4286rem;
+      height: 1.6327rem;
+      line-height:1.6327rem;
+      margin:0 auto;
+      >div{
+        .box-flex(1);
+        font-size: .898rem;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        &:first-child{
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+          border-left: 1px solid #ddd;
+          border-right: 1px solid #ddd;
+          position: relative;
+          &:before{
+              content:'';
+              width: 0;
+              height: 0;
+              border-bottom: 0.5306rem solid #2290F1;
+              border-left: 0.449rem solid transparent;
+              position: absolute;
+              right: -0.0408rem;
+              bottom: 0;
+          }
+      }
+      &::last-child{
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          border-right: 1px solid #ddd;
+      }
+    }
+  }
+  
+  /**
+      车牌键盘
+  **/
+  /*弹出键盘的CSS*/
+  .keyboard{
+      position:fixed;
+      bottom:0px;
+      z-index:100;
+      width:100%;
+  }
+  .iphone-keyboard {
+      border-top:1px solid #cdd0d5;
+      overflow:hidden;
+      background-color:#D8DFE7;
+      background-image:-moz-linear-gradient(#9098A3, #454f5d);
+      -moz-box-shadow:0 1px 0 rgba(255,255,255,.3) inset;
+      li {
+          text-align:left;
+          margin: 10px 2px 5px;
+          list-style:none;
+          &:first-child {
+              margin-top:10px;
+          }
+      }
+      .v-keyboard {
+          display:inline-block;
+          font-size: 0.7rem;
+          line-height: 32px;
+          background:#fff;
+          border:1px solid #cdd0d5;
+          height:32px;
+          color:#1e1e1e;
+          border-radius:5px 5px 5px 5px;
+          margin-bottom: 8px;
+          width:1.3rem;
+          text-align:center;
+          box-shadow: 0 1px 0 rgba(0,0,0,0.5);
+          &.active{
+              background:#ccc;
+          }
+          img{
+              width:25px;
+              vertical-align: -6px;
+          }
+      }
+      .v-keychar {
+          display:inline-block;
+          font-size: 0.7rem;
+          line-height: 32px;
+          background:#fff;
+          border:1px solid #cdd0d5;
+          height:32px;
+          color:#1e1e1e;
+          border-radius:5px 5px 5px 5px;
+          margin-bottom: 8px;
+          width:1.34rem;
+          text-align:center;
+          box-shadow: 0 1px 0 rgba(0,0,0,0.5);
+      }
+      .v-del{
+          width:4.2rem;
+          margin-left: 0rem;
+          margin-right: 0.1rem;
+          vertical-align: bottom;
+          background: #ABBAC3;
+          box-shadow: 0 1px 0 0 rgba(0,0,0,0.35);
+      }
+      div {
+          &.cur{
+              background-color: #389ffe;
+              color: #fff;
+              border-color: #389ffe;
+          }
+          &:active{
+              background: #3897fe;
+              color: #fff;
+          }
+      }
+  
+  }
+  .v-mg{
+      margin: 0.07rem;
+  }
+  
+  .v-submit{
+      font-size: .7rem;
+      background: #fff;
+      border: 1px solid #cdd0d5;
+      height: 32px;
+      line-height: 32px;
+      color: #1e1e1e;
+      border-radius: 5px 5px 5px 5px;
+      margin-bottom: 8px;
+      text-align: center;
+      display: block;
+      margin:0 .3rem 8px .3rem;
+  }
+  .ui-car-key-board>div.cursor{
+      border:1px solid #389ffe;
+  }
+  .ui-car-key-board>div:first-child{
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+  }
+  
+  .ui-car-key-board>div:last-child{
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+  }
+  /*焦点闪烁样式*/
+  // .cursor:after {
+  //     content: "";
+  //     width: 2px;
+  //     height: 8px;
+  //     font-size: 14px;
+  //     background-size: 2px 14px;
+  //     padding-left: 2px;
+  //     margin-left: 5px;
+  //     position: relative;
+  //     top: -2px;
+  //     background-color: #2290F1;
+  //     -webkit-animation: twinkling 1s infinite ease-in-out;
+  // }
+  
+  // @-webkit-keyframes twinkling{    /*透明度由0到1*/
+  
+  //     50%{
+  //        opacity:0; /*透明度为0*/
+  //      }
+  
+  //     100%{
+  //        opacity:1; /*透明度为1*/
+  //     }
+      
+  //   }
