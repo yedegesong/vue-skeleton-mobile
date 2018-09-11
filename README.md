@@ -1,6 +1,6 @@
 # demo
 
-> A Vue.js project
+> 一个 Vue H5移动端开发案例模板
 
 ## Build Setup
 
