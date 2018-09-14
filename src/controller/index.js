@@ -32,6 +32,11 @@ const ScrollNavController = () => import('./jscomponents/ScrollNavController.vue
 const ScrollTabController = () => import('./jscomponents/ScrollTabController.vue');
 const TabController = () => import('./jscomponents/TabController.vue');
 const CarkeyboardController = () => import('./jscomponents/CarkeyboardController.vue');
+
+/**
+ * js application //JS 组合应用
+ */
+const SaveInfiniteScrollController = () => import('./application/SaveInfiniteScrollController.vue');
 export default {
     AppController,
     BasicController,
@@ -57,5 +62,6 @@ export default {
     ScrollNavController,
     ScrollTabController,
     TabController,
-    CarkeyboardController
+    CarkeyboardController,
+    SaveInfiniteScrollController
 }
