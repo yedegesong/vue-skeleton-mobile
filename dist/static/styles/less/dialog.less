@@ -1,0 +1,108 @@
+.@{css-prefix}dialog,.@{css-prefix}message-box{
+    position: fixed;
+    z-index:1000;
+    width: 85%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.@{css-prefix}message-box img{
+    width:100%;
+}
+@media screen and (min-width: 1024px){
+    .@{css-prefix}dialog{
+        width: 35%;
+    }
+}
+.@{css-prefix}dialog-hd {
+    padding: 1.2em 0 .5em;
+}˙
+.@{css-prefix}dialog-title {
+    font-weight: 400;
+    font-size: 17px;
+}
+.@{css-prefix}dialog-confirm .@{css-prefix}dialog .@{css-prefix}dialog-hd {
+    text-align: center;
+    padding: 1.2em 20px .5em;
+    font-size:16px;
+}
+.@{css-prefix}dialog-bd {
+    padding: 0 20px;
+    font-size: 15px;
+    color: #888;
+}
+.@{css-prefix}dialog-confirm .@{css-prefix}dialog .@{css-prefix}dialog-bd {
+    text-align: left;
+}
+.@{css-prefix}dialog-ft {
+    position: relative;
+    line-height: 42px;
+    margin-top: 20px;
+    font-size: 17px;
+    display: -webkit-box;
+}
+.@{css-prefix}dialog-ft:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #d5d5d6;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    -ms-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+.@{css-prefix}dialog-ft a {
+    display: block;
+    -webkit-box-flex: 1;
+    color: #2d8cf0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.@{css-prefix}dialog-ft a, .@{css-prefix}dialog-ft a:active, .@{css-prefix}dialog_ft a:hover {
+    text-decoration: none;
+}
+
+.@{css-prefix}btn-dialog.default {
+    color: #353535;
+}
+
+.@{css-prefix}dialog-confirm .@{css-prefix}dialog-ft a {
+    position: relative;
+}
+
+.@{css-prefix}btn-dialog.primary {
+    color: #2196f3;
+}
+.@{css-prefix}dialog-ft>a:nth-child(2):after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid #d5d5d6;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleX(.5);
+    -ms-transform: scaleX(.5);
+    transform: scaleX(.5);
+    overlow:hidden;
+}
+.@{css-prefix}dialog-confirm .@{css-prefix}dialog-ft a:last-child {
+    float: none;
+    width: auto;
+    overflow: hidden;
+}
+

@@ -1,0 +1,128 @@
+
+//时间线
+
+.@{css-prefix}timeline{
+
+}
+
+.@{css-prefix}timeline-content{
+    margin-left: 16px;
+}
+
+.@{css-prefix}timeline-item{
+    position: relative;
+    border-left: 1px solid #e4e5e9;
+    padding-bottom:20px;
+}
+
+.timeline-item-hd{
+    position: relative;
+}
+
+.timeline-item-hd img{
+    margin-left:.48rem;
+    border-radius: 100%;
+}
+
+.timeline-item-hd:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #2d8cf0;
+    -webkit-border-radius: 6px;
+    border-radius: 100%;
+    background-color: #FFF;
+    -webkit-transform: scale(.5);
+    -ms-transform: scale(.5);
+    transform: scale(.5);
+}
+
+.timeline-item-cn{
+    position: relative;
+    padding-bottom:.3rem;
+    padding-right:.5rem;
+    margin-left:.8rem;
+}
+
+.@{css-prefix}timeline-item:last-child{
+    border-left-color: #fff;
+    padding-bottom: 0;
+}
+
+.@{css-prefix}timeline-item:last-child:before{
+    position: absolute;
+    top: 0;
+    left: -3px;
+    width: 4px;
+    height: 10px;
+    border-right: none;
+    content: '';
+    background-color: #fff;
+    border-right: 1px solid #e4e5e9;
+    left: -4px;
+}
+
+/***
+    线性图二
+**/
+
+
+.@{css-prefix}processline{
+
+}
+
+.@{css-prefix}processline-content{
+    margin-left: 16px;
+}
+
+.@{css-prefix}processline-item{
+    position: relative;
+    padding-bottom:20px;
+}
+
+.@{css-prefix}processline-item:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 19px;
+    border-left:1px solid #e4e5e9;
+}
+.processline-item-hd{
+
+}
+
+
+.processline-item-hd{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    overflow: hidden;
+    background-color: #2d8cf0;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 100%;
+}
+.processline-item-hd img{
+    width:100%;
+}
+.@{css-prefix}processline-item:last-child{
+    border-left-color: #fff;
+    padding-bottom: 0;
+}
+
+.processline-item-cn{
+    position: relative;
+    padding-right: .5rem;
+    margin-left: .8rem;
+}
+
+.processline-item-cn .@{css-prefix}cells{
+    padding:0;
+    width:100%;
+}
