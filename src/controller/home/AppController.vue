@@ -16,6 +16,12 @@
           {{item.title}}
         </div>
       </div>
+       <h1 class="page-title">Application</h1>
+       <div class="xfd-row xfd-grids-3">
+        <div @click="goPath(item)" v-for="item in apItems" class="xfd-col xfd-col-33 demo-grids xfd-grids-item box box-align box-pack">
+          {{item.title}}
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -124,6 +130,12 @@
           {
             path: '/JsComponents/carkeyboard',
             title: "carkeyboard(车牌键盘)"
+          }
+        ],
+        apItems: [
+          {
+            path: '/application/SaveInfiniteScrollController',
+            title: '基于vuex 实现记录滚动轴位置'
           }
         ]
       }

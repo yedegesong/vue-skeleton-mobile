@@ -5,6 +5,14 @@ import Tool from '@utils/tool';
 
 Vue.use(Router)
 const router = new Router({
+  // mode: 'history',
+  // scrollBehavior (to, from, savedPosition) {
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       resolve({ x: 0, y: 100 })
+  //     })
+  //   })
+  // },
   routes: [
     {
       path: '/',
@@ -130,6 +138,11 @@ const router = new Router({
       path: '/JsComponents/carkeyboard',
       component: Modeules.CarkeyboardController,
       meta: { title: "Carkeyboard" }
+    },
+    {
+      path: '/application/SaveInfiniteScrollController',
+      component: Modeules.SaveInfiniteScrollController,
+      meta: { title: "基于vuex 实现记录滚动位置" }
     },
     {
       path: '/myinfo',

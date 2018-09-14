@@ -12,7 +12,7 @@
         <section class="xfd-container" ref="scrollView">
             <xfd-infinite-scroll :isNextPage="isNextPage" ref="infiniteScroll" :callback="handleLoadList" @scroll-callback="getScroll">
                 <div class="xfd-cells-box">
-                    <div class="xfd-cells xfd-arrowlink xfd-line" v-for="(link,key) in links" :key="key">
+                    <div class="xfd-cells xfd-arrowlink xfd-line" v-for="(link,key) in links" :key="key" @click="goPath">
                         {{link.title}}
                     </div>
                 </div>
@@ -118,6 +118,9 @@
             }
         },
         methods: {
+            goPath(){
+                this.$router.push('/')
+            },
            handleLoadList() {
                let _list = this.links
                 setTimeout(() => {
