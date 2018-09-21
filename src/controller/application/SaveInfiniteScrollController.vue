@@ -12,8 +12,8 @@
         <section class="xfd-container" ref="scrollView">
             <xfd-infinite-scroll :isNextPage="isNextPage" ref="infiniteScroll" :callback="handleLoadList" @scroll-callback="getScroll">
                 <div class="xfd-cells-box">
-                    <div class="xfd-cells xfd-arrowlink xfd-line" v-for="(link,key) in links" :key="key" @click="goPath">
-                        {{link.title}}
+                    <div class="xfd-cells xfd-arrowlink xfd-line" v-for="(link,key) in links" :key="key" @click="goPath(link,key)">
+                        {{link.title}}<span class="text-warning">{{link.status | capitalize}}</span>
                     </div>
                 </div>
             </xfd-infinite-scroll>
@@ -44,8 +44,15 @@
                 }
             })
         },
+        filters: {
+            capitalize: function(value) {
+                
+                return value==0?'未读':'已读'
+            }
+        },
         methods: {
-            goPath() {
+            goPath(item,key) {
+                this.$store.dispatch('ListMutation/setList', key)
                 this.$router.push('/')
             },
             handleLoadList() {
@@ -64,7 +71,7 @@
                     this.isNextPage = this.page > 2 ? false : true;
                     this.$store.dispatch('ListMutation/queryList', items)
                     this.$store.dispatch(`setScrollPage`, this.page)
-                }, 1000 )
+                }, 1000)
     
     
             },
