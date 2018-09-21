@@ -3,95 +3,89 @@ const ListMutation = {
     state: {
         links: [{
             title: 'vuex(数据状态)',
-            url: '/vuex'
+            url: '/vuex',
+            status:0
         },
         {
             title: 'tree(树)',
-            url: '/tree'
+            url: '/tree',
+            status:0
         },
         {
             title: 'picker(下拉选择)',
-            url: '/picker'
+            url: '/picker',
+            status:0
         },
         {
             title: 'dialog(弹框)',
-            url: '/dialog'
+            url: '/dialog',
+            status:0
         },
         {
             title: 'messageBox(自定义弹出内容)',
-            url: '/messageBox'
+            url: '/messageBox',
+            status:0
         },
         {
             title: 'counter（计步器）',
-            url: '/counter'
+            url: '/counter',
+            status:0
         },
         {
             title: 'sendCode（计时按钮）',
-            url: '/code'
+            url: '/code',
+            status:0
         },
         {
             title: 'search（搜索框）',
-            url: '/search'
+            url: '/search',
+            status:0
         },
         {
             title: 'infiniteScroll（持续滚动加载)',
-            url: '/infiniteScroll'
+            url: '/infiniteScroll',
+            status:0
         },
         {
             title: 'carkeyboard（自定义车牌键盘)',
-            url: '/carkeyboard'
+            url: '/carkeyboard',
+            status:0
         },
         {
             title: 'actionsheet(下拉弹出选择)',
-            url: '/actionsheet'
+            url: '/actionsheet',
+            status:0
         },
         {
             title: 'upload(图片上传)',
-            url: '/upload'
+            url: '/upload',
+            status:0
         },
         {
             title: 'scrollNav(滚动菜单)',
-            url: '/scrollNav'
-        },
-        {
-            title: 'scrolltab(分类菜单)',
-            url: '/scrolltab'
-        },
-        {
-            title: 'tabs(元素模块切换)',
-            url: '/tabs'
-        },
-        {
-            title: 'cellSwipe(左拉删除)',
-            url: '/pullleft'
-        },
-        {
-            title: '下拉刷新',
-            url: '/pulldown'
+            url: '/scrollNav',
+            status:0
         },
         {
             title: '上拉刷新',
-            url: '/pullup'
+            url: '/pullup',
+            status:0
         },
         {
             title: '上拉,下拉刷新',
-            url: '/pull'
-        },
-
-        {
-            title: '左拉实时滑动',
-            url: '/pulllefttwo'
-        },
-        {
-            title: 'jQuery插件结合',
-            url: '/jQuery'
-        },
+            url: '/pull',
+            status:0
+        }
         ]
     },
     actions: {
         queryList({ commit, state, rootState, dispatch }, pramas) {
-           
             commit('QUERY_LIST', pramas)
+        },
+        setList({ commit, state, rootState, dispatch }, pramas) {
+            state.links[pramas].status = 1
+        
+            commit('QUERY_LIST', state.links)
         },
     },
     mutations: {
