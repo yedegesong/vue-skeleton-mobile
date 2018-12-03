@@ -156,7 +156,13 @@
       //   console.log('我处理错误')
       //   console.log(response)
       // })
-  
+  this.$api.registered().then((response) => {
+        console.log('我处理正确')
+        console.log(response)
+      }, (response) => {
+        console.log('我处理错误')
+        console.log(response)
+      })
     }
   }
 </script>

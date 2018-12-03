@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    //proxyTable: {},
+    proxyTable: {
+      '/api': {
+        target: 'http://127.0.0.1:6767/api',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    },
     /**
      * 代理案例
      * proxyTable: {
@@ -58,7 +67,7 @@ module.exports = {
      */
     assetsRoot: path.resolve(__dirname, '../dist'),
     /**
-     * 将webpack生成的资源嵌入此目录中
+     * 将webpack生成的静态依赖资源嵌入此目录中
      */
     assetsSubDirectory: 'static',
     /**

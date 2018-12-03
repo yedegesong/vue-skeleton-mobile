@@ -36,6 +36,7 @@ class Server {
             }).then((response,aop) => {
                 return response.data;
             }, (err) => {
+                console.log(err)
                console.log(err.response)
             }).catch(function (error) {
                 
