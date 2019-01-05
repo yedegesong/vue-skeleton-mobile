@@ -15,6 +15,8 @@ Vue.config.productionTip = false
  * 获取环境变量
  * Vue.config.productionTip = process.env.NODE_ENV
  */
+Vue.config.productionTip = process.env
+console.log(Vue.config.productionTip)
 /* eslint-disable no-new */
 Vue.prototype.$api = api;
 Object.keys(filters).forEach(key => {
